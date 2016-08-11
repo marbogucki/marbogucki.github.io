@@ -1,0 +1,18 @@
+.page-heading {
+  font-size: 4.3rem;
+  font-family: $oswald;
+  font-weight: 400;
+  color: $grey;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5rem 0 8rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: $blue;
+    margin: 0 auto;
+  }
+}
