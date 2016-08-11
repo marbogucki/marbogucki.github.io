@@ -7,17 +7,26 @@
   background-color: transparent;
   display: block;
   margin: 0 auto;
-  @include transition($property: background-color);
+  color: $white;
+  font-size: 3.5rem;
+  line-height: 7rem;
+
+  .fa {
+    line-height: 7rem;
+    @include transition();
+  }
 
   &:hover {
-    background-color: $white;
+    .fa {
+      line-height: 8.2rem;
+    }
   }
 
   // ====== min-width: 720px and min-height: 700px ----
-  @include rwd(md, 700px) {
+  @include rwd(md, $height700) {
     position: absolute;
     left: 50%;
-    bottom: 8rem;
+    bottom: 6rem;
     margin-left: -3.5rem;
   }
 }

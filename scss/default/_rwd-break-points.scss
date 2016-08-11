@@ -8,6 +8,9 @@ $breakpoints: (
         xx: 1200px
 );
 
+$height500: 500px;
+$height700: 700px;
+
 @mixin rwd($size, $height: 0) {
   @if($height == 0) {
     @media (min-width: map-get($breakpoints, $size)){
@@ -19,4 +22,5 @@ $breakpoints: (
     }
   }
 }
+
 
