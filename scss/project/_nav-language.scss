@@ -1,0 +1,61 @@
+.nav-language {
+  @extend %reset-list;
+  position: absolute;
+  top: 1.8rem;
+  left: 1rem;
+
+  li {
+    display: inline-block;
+    margin-left: 1rem;
+
+    a {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: block;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-family: $oswald;
+      font-weight: 300;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 3.1rem;
+      border: 2px solid $white;
+      border-radius: 50%;
+      @include transition();
+
+      &:hover {
+        border-color: transparent;
+        background-color: rgba($white, .7);
+        color: $blue;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
+
+  // ====== min-width: 600px ----
+  @include rwd(ms) {
+    position: relative;
+    text-align: center;
+    top: 2.6rem;
+    left: 0;
+
+    li {
+      margin: 0 .5rem;
+    }
+  }
+
+  // ====== min-width: 960px ----
+  @include rwd(lg) {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    left: inherit;
+  }
+}

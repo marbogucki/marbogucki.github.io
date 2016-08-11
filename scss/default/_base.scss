@@ -9,8 +9,16 @@ body {
   font-size: 1.4rem;
 }
 
-
 .container {
+  position: relative;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1200px;
+}
+
+a,
+button {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }

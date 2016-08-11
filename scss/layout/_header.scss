@@ -1,16 +1,20 @@
 .site-header {
-  background-color: $blue;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
   @extend %clearfix;
 
-  @include rwd(md) {
-    padding-top: 5rem;
+  .header-bg {
+    width: 100%;
     padding-bottom: 5rem;
+    background-color: rgba($blue, .85);
   }
 
   h1 {
     margin: 0;
+    padding-top: 8rem;
     font-family: $oswald;
     font-weight: 400;
     font-size: 3.8rem;
@@ -20,12 +24,6 @@
     line-height: 1.1;
     text-align: center;
 
-    @include rwd(md) {
-      float: left;
-      font-size: 4.8rem;
-      text-align: left;
-    }
-
     span {
       display: block;
       font-family: $ropa-sans;
@@ -33,11 +31,74 @@
       font-weight: 400;
       letter-spacing: .07rem;
       margin-top: 1rem;
+    }
 
-      @include rwd(md) {
+    // ====== min-width: 600px ----
+    @include rwd(ms) {
+      padding-top: 5rem;
+    }
+
+    // ====== min-width: 960px ----
+    @include rwd(lg) {
+      float: left;
+      font-size: 4.8rem;
+      text-align: left;
+
+      span {
         font-size: 2.4rem;
         margin-top: 0;
       }
+    }
+  }
+
+  // ====== min-width: 720px and min-height: 700px ----
+  @include rwd(md, 700px){
+    height: 100vh;
+
+    .container,
+    .header-bg {
+      height: 100vh;
+    }
+    .header-bg {
+      position: absolute;
+    }
+  }
+}
+
+.site-header {
+
+  .heading {
+    font-family: $oswald;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 1.6;
+    color: $white;
+    margin: 0 auto;
+    text-transform: uppercase;
+    max-width: 120rem;
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 30%;
+      height: 2px;
+      background-color: $white;
+      margin: 4rem auto 0;
+    }
+
+    // ====== min-width: 600px ----
+    @include rwd(sm){
+      font-size: 3rem;
+    }
+    @include rwd(lg){
+      padding-top: 200px;
+    }
+
+    // ====== min-width: 960px and min-height: 700px ----
+    @include rwd(lg, 700px){
+      padding-top: 43vh;
     }
   }
 }
