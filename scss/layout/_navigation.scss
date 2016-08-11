@@ -5,12 +5,74 @@
 }
 
 .site-navigation {
+  margin-top: 2rem;
+  border-top: 1px solid $white;
 
   li {
 
     a {
       text-decoration: none;
-      color: $white;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: rgba($white, .7);
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      border-bottom: 1px solid $white;
+      @include transition(color);
+
+      &:hover {
+        background-color: rgba($white, .3);
+        color: $white;
+      }
+
+      @include rwd(ms) { // min-width: 600px
+        text-transform: none;
+        border-bottom: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
     }
+
+    &.active {
+      a {
+        cursor: default;
+        background-color: $white;
+        color: $blue;
+      }
+    }
+
+    @include rwd(ms) { // min-width: 600px
+      display: inline-block;
+      margin: 0 2rem;
+
+      @include rwd(md) { // min-width: 720px
+        margin-right: 0;
+        margin-left: 3rem;
+      }
+
+      &.active {
+
+        a {
+          background-color: transparent;
+          color: $white;
+          border-bottom: 3px solid $white;
+          padding-bottom: .5rem;
+        }
+      }
+    }
+  }
+
+  @include rwd(ms) { // min-width: 600px
+    border-top: 0;
+    text-align: center;
+  }
+
+  @include rwd(md) { // min-width: 720px
+    float: right;
+    margin-top: 4.7rem;
   }
 }

@@ -1,22 +1,43 @@
 .site-header {
   background-color: $blue;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @extend %clearfix;
+
+  @include rwd(md) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 
   h1 {
     margin: 0;
     font-family: $oswald;
     font-weight: 400;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     color: $white;
     text-transform: uppercase;
     letter-spacing: .1rem;
     line-height: 1.1;
+    text-align: center;
+
+    @include rwd(md) {
+      float: left;
+      font-size: 4.8rem;
+      text-align: left;
+    }
 
     span {
       display: block;
       font-family: $ropa-sans;
-      font-size: 2.4rem;
+      font-size: 2.1rem;
       font-weight: 400;
       letter-spacing: .07rem;
+      margin-top: 1rem;
+
+      @include rwd(md) {
+        font-size: 2.4rem;
+        margin-top: 0;
+      }
     }
   }
 }
