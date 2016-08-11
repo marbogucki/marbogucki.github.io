@@ -2,7 +2,7 @@
   @extend %reset-list;
   position: absolute;
   top: 1.8rem;
-  left: 1rem;
+  left: 1.5rem;
 
   li {
     display: inline-block;
@@ -38,25 +38,12 @@
       }
     }
   }
+}
 
-  // ====== min-width: 600px ----
-  @include rwd(ms) {
-    position: relative;
-    text-align: center;
-    top: 2.6rem;
-    left: 0;
+/* ============== HEADER MIN SCROLL =============== */
+.header-min-scroll {
 
-    li {
-      margin: 0 .5rem;
-    }
-  }
-
-  // ====== min-width: 960px ----
-  @include rwd(lg) {
-    position: absolute;
-    top: 5rem;
-    right: 0;
-    left: inherit;
-    margin-right: 1rem;
+  .nav-language {
+    display: none;
   }
 }
