@@ -1,5 +1,49 @@
 .about {
 
+  .my-picture {
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    margin-bottom: 6rem;
+    display: block;
+
+    img {
+      max-width: 20rem;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      vertical-align: middle;
+    }
+
+
+    // ====== min-width: 600px ----
+    @include rwd(ms) {
+
+      &::after,
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 100px;
+        height: .3rem;
+        background-color: $blue;
+        vertical-align: middle;
+
+        // ====== min-width: 768px ----
+        @include rwd(md) {
+          width: 200px;
+        }
+      }
+
+      &::after {
+        margin-left: 2rem;
+      }
+
+      &::before {
+        margin-right: 2rem;
+      }
+    }
+  }
+
   .container {
     padding: 0 2rem;
   }

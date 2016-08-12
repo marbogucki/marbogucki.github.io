@@ -6,7 +6,9 @@ var lang = {
         about: 'O mnie',
         experience: 'Doświadczenie',
         skills: 'Umiejętności',
-        contact: 'Kontakt'
+        contact: 'Kontakt',
+
+        button_cv: 'Pobierz moje CV'
 
     },
 
@@ -16,8 +18,9 @@ var lang = {
         about: 'About me',
         experience: 'Experience',
         skills: 'Skills',
-        contact: 'Contact'
+        contact: 'Contact',
 
+        button_cv: 'Download my CV'
     }
 
 };

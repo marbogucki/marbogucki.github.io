@@ -27,6 +27,9 @@
 
                 singlePage.changeLanguageVersion();
                 singlePage.buttonChangeLanguage();
+
+                singlePage.btnGoToAbout();
+                singlePage.btnGoToSection();
             },
 
             /* ----- show min header after scroll ----- */
@@ -106,6 +109,35 @@
                     $('body').animate({
                        scrollTop: 0
                    }, 800);
+                });
+            },
+
+            /* ----- button go to about ----- */
+            btnGoToAbout: function() {
+                $('.btn-next-section').on('click', function(ev) {
+                    ev.preventDefault();
+                    var aboutPosition = $('#about-me').offset().top;
+
+                    $('body').animate({
+                        scrollTop: aboutPosition
+                    }, 1200);
+                });
+            },
+
+            /* ----- button go to section ----- */
+            btnGoToSection: function() {
+                $('.site-navigation a').on('click', function(ev) {
+                    ev.preventDefault();
+                    var $link = $(this);
+                    var hash = $link[0].hash;
+                    var sectionPosition = $(hash).offset().top;
+
+                    $('.site-navigation a').parent().removeClass('active');
+                    $link.parent().addClass('active');
+
+                    $('body').animate({
+                        scrollTop: sectionPosition
+                    }, 1200);
                 });
             }
         };
