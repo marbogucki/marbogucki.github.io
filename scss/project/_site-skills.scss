@@ -1,0 +1,88 @@
+.skills {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.sills-list {
+  @extend %reset-list;
+  @extend %clearfix;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+
+  li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    // * ========== min-width: 480px ----------
+    @include rwd(sm) {
+      width: 33.3334%;
+    }
+
+    // * ========== min-width: 600px ----------
+    @include rwd(ms) {
+      width: 25%;
+      margin-bottom: 5rem;
+    }
+
+    // * ========== min-width: 768px ----------
+    @include rwd(md) {
+      width: 20%;
+      margin-bottom: 7rem;
+    }
+
+    // * ========== min-width: 960px ----------
+    @include rwd(lg) {
+      width: 16.6667%;
+    }
+
+    // * ========== min-width: 1200px ----------
+    @include rwd(xx) {
+      width: 12.5%;
+    }
+  }
+
+  i,
+  img {
+    font-size: 4rem;
+    color: rgba($blue, .7);
+    border: 2px solid rgba($grey, .3);
+    border-radius: 50%;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    margin: 0 auto;
+    @include  transition();
+
+    &:hover {
+      transform: scale(1.1);
+
+      & + .skill-list-name {
+        color: $blue;
+      }
+    }
+  }
+
+  img {
+    padding: 2.5rem;
+
+    &.jira-icon {
+      padding: 2rem;
+    }
+
+    &.rwd-icon {
+      padding: 1.7rem;
+    }
+  }
+
+  .skill-list-name {
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    @include  transition();
+  }
+}
