@@ -17,6 +17,7 @@
     letter-spacing: .1rem;
     line-height: 1.1;
     text-align: center;
+    @include transition();
 
     span {
       display: block;
@@ -26,20 +27,34 @@
       letter-spacing: .07rem;
       margin-top: 1rem;
     }
+
+    a {
+      display: block;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
   }
 
-  // * ========== min-width: 720px ----------
-  @include rwd(md) {
+  // * ========== min-width: 960px ----------
+  @include rwd(lg) {
     .site-logo {
-      //float: left;
+      padding-top: 5rem;
+      float: left;
     }
   }
 }
+
+
 
 /* ============== HEADER MIN SCROLL =============== */
 .header-min-scroll {
   background-color: rgba($blue, .8);
   box-shadow: 0 .2rem 1rem rgba(#114f58, .2);
+  @include transition();
 
   .site-logo {
     padding-top: 2.3rem;
@@ -50,6 +65,13 @@
 
     span {
       font-size: 1.2rem;
+    }
+  }
+
+  // * ========== min-width: 720px ----------
+  @include rwd(md) {
+    .site-logo {
+      float: left;
     }
   }
 }

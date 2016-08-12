@@ -3,6 +3,7 @@
 @import 'default/colors';
 @import 'default/typography';
 @import 'default/font-awesome.min';
+@import 'default/devicon.min';
 @import 'default/helpers';
 @import 'default/mixins';
 @import 'default/rwd-break-points';
@@ -19,3 +20,6 @@
 @import 'project/nav-language';
 @import 'project/page-heading';
 @import 'project/site-banner';
+@import 'project/site-cv';
+@import 'project/button-back-to-top';
+@import 'project/_site-about-me';

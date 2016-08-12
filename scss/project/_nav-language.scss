@@ -3,6 +3,7 @@
   position: absolute;
   top: 1.8rem;
   left: 1.5rem;
+  @include transition();
 
   li {
     display: inline-block;
@@ -38,12 +39,20 @@
       }
     }
   }
+
+  // * ========== min-width: 960px ----------
+  @include rwd(lg) {
+    top: 5.5rem;
+    right: 1.5rem;
+    left: auto;
+  }
 }
 
 /* ============== HEADER MIN SCROLL =============== */
 .header-min-scroll {
 
   .nav-language {
+    @include transition();
     display: none;
   }
 }

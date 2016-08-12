@@ -1,5 +1,6 @@
 .site-navigation {
   position: relative;
+  @include transition();
 
   .nav-main {
     @extend %reset-list;
@@ -7,19 +8,21 @@
     margin-top: 2rem;
     border-top: 1px solid $white;
 
-  }
-
-  // * ========== min-width: 720px ----------
-  @include rwd(md) {
-    //float: right;
-
-    .nav-main {
+    // * ========== min-width: 720px ----------
+    @include rwd(md) {
       margin-top: 1rem;
-      display: block;
+      display: block !important;
       border-top: 0;
     }
   }
+
+  // * ========== min-width: 960px ----------
+  @include rwd(lg) {
+    float: right;
+    margin-top: 8.4rem;
+  }
 }
+
 
 .nav-main {
   box-shadow: 0 0 20px rgba($black, .3);
@@ -87,6 +90,25 @@
           border-bottom: 3px solid $white;
         }
       }
+    }
+  }
+}
+
+/* ============== HEADER MIN SCROLL =============== */
+.header-min-scroll {
+
+  .site-navigation {
+    @include transition();
+
+    // * ========== min-width: 720px ----------
+    @include rwd(md) {
+      float: right;
+      @include transition();
+    }
+
+    // * ========== min-width: 960px ----------
+    @include rwd(lg) {
+      margin-top: 0;
     }
   }
 }

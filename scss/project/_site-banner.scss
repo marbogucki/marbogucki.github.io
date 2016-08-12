@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: 20% center;
   padding-bottom: 5rem;
+  @include transition($property: all, $duration: 1s);
 
   &::after {
     content: '';
@@ -24,9 +25,37 @@
     color: $white;
     text-align: center;
     padding: 23rem 2rem 10rem;
+    font-size: 2.7rem;
 
     b {
       text-transform: uppercase;
+      font-size: 3.5rem;
+    }
+  }
+
+  // * ========== min-width: 720px ----------
+  @include rwd(md, 600px) {
+    height: 100vh;
+
+    .heading {
+      padding-top: 45vh;
+      font-size: 3.2rem;
+
+      b {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  // * ========== min-width: 960px ----------
+  @include rwd(lg) {
+
+    .heading {
+      font-size: 4rem;
+
+      b {
+        font-size: 4.5rem;
+      }
     }
   }
 }

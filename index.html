@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Ropa+Sans:400,400i&subset=latin-ext">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="scss/layout/_navigation.scss">
 </head>
 <body>
     <!-- header -->
     <header class="site-header">
         <div class="container">
             <!-- logo txt -->
-            <h1 class="site-logo">Marcin Bogucki <span>Front-end Developer &amp; Web Designer</span></h1>
+            <h1 class="site-logo">
+                <a href="#home">Marcin Bogucki <span>Front-end Developer &amp; Web Designer</span></a>
+            </h1>
 
             <!-- navigation -->
             <nav class="site-navigation">
                 <ul class="nav-main">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="#home" data-lang="home">Home</a></li>
+                    <li><a href="#about-me" data-lang="about">About me</a></li>
+                    <li><a href="#experience" data-lang="experience">Experience</a></li>
+                    <li><a href="#skills" data-lang="skills">Skills</a></li>
+                    <li><a href="#contact" data-lang="contact">Contact</a></li>
                 </ul>
             </nav>
 
             <!-- button language -->
             <ul class="nav-language">
-                <li><a href="#">pl</a></li>
-                <li class="active"><a href="#">en</a></li>
+                <li><a href="#" data-ver-lang="pl">pl</a></li>
+                <li class="active"><a href="#" data-ver-lang="en">en</a></li>
             </ul>
 
             <!-- button nav mobile ;-->
@@ -44,8 +45,11 @@
     <!-- main -->
     <main>
         <!-- site banner -->
-        <section class="site-banner" style="background-image: url('images/slide-01.jpg');">
-            <h2 class="heading"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b><br> Phasellus dapibus, nulla at dapibus pretium.</h2>
+        <section class="site-banner" style="background-image: url('images/slide-01.jpg');"  id="home">
+            <h2 class="heading">
+                <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b><br>
+                Phasellus dapibus, nulla at dapibus pretium.
+            </h2>
 
             <button type="button" class="btn-next-section">
                 <i class="fa fa-angle-double-down" aria-hidden="true"></i>
@@ -53,24 +57,47 @@
         </section>
 
         <!-- about me -->
-        <section id="about">
-            <h2 class="page-heading">About me</h2>
+        <section class="about" id="about-me">
+            <h2 class="page-heading" data-lang="about">About me</h2>
+
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad alias aliquam amet animi
+                    aperiam asperiores cum cupiditate distinctio doloremque eius eum fuga fugit itaque iure laboriosam
+                    nesciunt nobis nostrum perspiciatis placeat porro praesentium provident quasi qui quos, recusandae
+                    reprehenderit saepe similique sit tempore temporibus tenetur unde voluptate voluptates
+                    voluptatibus?</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid debitis deserunt dolore ducimus
+                    impedit, ipsam possimus? Accusamus alias dicta dignissimos eligendi harum id illo laudantium magni,
+                    mollitia nemo nesciunt placeat, quaerat quis quos, soluta suscipit voluptates. Laboriosam nisi
+                    obcaecati veritatis.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi asperiores beatae eius eos
+                    ex expedita fugiat incidunt iste, magni maxime nostrum officia, praesentium quo recusandae
+                    reiciendis temporibus vel veritatis voluptatem. Aspernatur assumenda at autem cupiditate eius facere
+                    modi nam nemo nihil numquam odio placeat possimus quaerat quis, quod quos ratione repudiandae sunt
+                    suscipit temporibus totam veritatis, vero voluptatum.</p>
+            </div>
         </section>
 
         <!-- experience -->
         <section id="experience">
-            <h2 class="page-heading">Experience</h2>
+            <h2 class="page-heading" data-lang="experience">Experience</h2>
         </section>
 
         <!-- skills -->
         <section id="skills">
-            <h2 class="page-heading">Skills</h2>
+            <h2 class="page-heading" data-lang="skills">Skills</h2>
         </section>
 
         <!-- contact -->
-        <div id="contact">
-
-        </div>
+        <section class="cv" id="contact">
+            <div class="container">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorum earum eum facere incidunt magni odit similique velit. Aut dolorum eius eligendi, fugit natus numquam porro? Iure molestias placeat sequi!</p>
+                <a href="doc/cv-marcin-bogucki.pdf" target="_blank">Download CV</a>
+            </div>
+        </section>
     </main><!-- /main -->
 
     <!-- footer -->
@@ -84,7 +111,11 @@
         </ul>
     </footer><!-- /footer -->
 
+    <!-- btn back to top -->
+    <button type="button" class="btn-back-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+
     <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/lang-version.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

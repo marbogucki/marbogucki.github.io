@@ -13,9 +13,30 @@
     height: .3rem;
     background-color: $white;
     margin: .7rem 0;
+    @include transition();
   }
 
   @include rwd(md) {
     display: none;
+  }
+
+  &.active {
+
+    span {
+      position: absolute;
+
+      &:first-child {
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-135deg);
+      }
+    }
   }
 }
