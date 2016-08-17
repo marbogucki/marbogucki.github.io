@@ -47,8 +47,8 @@
   i,
   img {
     font-size: 4rem;
-    color: rgba($blue, .7);
-    border: 2px solid rgba($grey, .3);
+    color: rgba($blue, .9);
+    border: 2px solid rgba($grey, .12);
     border-radius: 50%;
     display: block;
     width: 10rem;
@@ -83,6 +83,7 @@
     display: block;
     margin-top: 1rem;
     font-size: 1.9rem;
+    color: $grey;
     @include  transition();
   }
 }

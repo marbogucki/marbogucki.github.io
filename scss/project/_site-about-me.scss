@@ -9,12 +9,11 @@
     display: block;
 
     img {
+      border-radius: 20rem;
       max-width: 20rem;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
+
       vertical-align: middle;
     }
-
 
     // ====== min-width: 600px ----
     @include rwd(ms) {
@@ -25,7 +24,7 @@
         display: inline-block;
         width: 100px;
         height: .3rem;
-        background-color: $blue;
+        background-color: rgba($blue, .6);
         vertical-align: middle;
 
         // ====== min-width: 768px ----

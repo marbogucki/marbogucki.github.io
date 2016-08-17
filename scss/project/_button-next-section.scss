@@ -5,15 +5,15 @@
   width: 7rem;
   height: 7rem;
   border: 2px solid $white;
-  border-radius: 50%;
+  border-radius: 7rem;
   background-color: transparent;
   display: block;
   margin: 0 auto;
-  color: $white;
-  font-size: 3.5rem;
-  line-height: 7rem;
+  text-align: center;
 
   .fa {
+    color: $white;
+    font-size: 3.5rem;
     line-height: 7rem;
     @include transition();
   }

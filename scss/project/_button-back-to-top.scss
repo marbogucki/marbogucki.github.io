@@ -1,31 +1,37 @@
 .btn-back-to-top {
+
   @extend %reset-button;
 
   display: none;
-
   position: fixed;
-  bottom: 12.5rem;
+  bottom: 2.5rem;
   right: 1.7rem;
 
   background-color: rgba($blue, .9);
-  color: $white;
-  font-size: 3.5rem;
 
   width: 5rem;
   height: 5rem;
-  border-radius: 50%;
+  border-radius: 5rem;
   border: 2px solid $white;
-
   @include transition();
 
-  &:hover {
-    opacity: 1;
-    font-sizee: 5rem;
-    width: 6rem;
-    height: 6rem;
+  .fa {
+    color: $white;
+    font-size: 3rem;
+    @include transition();
   }
 
-  // * ========== min-width: 6000px ----------
+  &:hover {
+
+    width: 6rem;
+    height: 6rem;
+
+    .fa {
+      font-size: 4rem;
+    }
+  }
+
+  // * ========== min-width: 600px ----------
   @include rwd(ms) {
     bottom: 5.5rem;
     right: 3.7rem;

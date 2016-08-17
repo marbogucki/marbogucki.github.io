@@ -2,7 +2,7 @@
   font-size: 4.3rem;
   font-family: $oswald;
   font-weight: 400;
-  color: $grey;
+  color: $grey-light;
   text-align: center;
   text-transform: uppercase;
   padding: 7rem 0 2rem;
@@ -12,7 +12,7 @@
     display: block;
     width: 70px;
     height: 4px;
-    background-color: $blue;
+    background-color: rgba($blue, .6);
     margin: 0 auto;
   }
 }

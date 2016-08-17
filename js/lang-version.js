@@ -4,7 +4,7 @@ var lang = {
 
         home: 'Strona Główna',
         about: 'O mnie',
-        experience: 'Doświadczenie',
+        experience: 'Doświadczenie zawodowe',
         skills: 'Umiejętności',
         contact: 'Kontakt',
 

@@ -44,6 +44,11 @@
     .site-logo {
       padding-top: 5rem;
       float: left;
+      text-align: left;
+
+      span {
+        font-size: 1.9rem;
+      }
     }
   }
 }

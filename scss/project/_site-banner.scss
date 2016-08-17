@@ -2,6 +2,7 @@
   position: relative;
   background-size: cover;
   background-position: 20% center;
+  background-attachment: fixed;
   padding-bottom: 5rem;
   @include transition($property: all, $duration: 1s);
 

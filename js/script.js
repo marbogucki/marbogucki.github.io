@@ -13,40 +13,44 @@
             /* ----- INIT ----- */
             init: function() {
 
-                singlePage.scrollHeaderMin();
+                singlePage.scrollHeaderMin( $('.site-header'), 'header-min-scroll' );
                 singlePage.animateBannerImg();
-                singlePage.showHideNav();
+                singlePage.showHideNav( $('.btn-mobile-nav'), $('.nav-main') );
 
-                $(window).on('scroll', function() {
-                    singlePage.scrollHeaderMin();
-                    singlePage.btnShowHide();
+                $(document).on('scroll', function() {
+                    singlePage.scrollHeaderMin( $('.site-header'), 'header-min-scroll' );
+                    singlePage.btnShowHide( $('.btn-back-to-top') );
                 });
 
-                singlePage.btnBackToTop();
-                singlePage.btnShowHide();
+                singlePage.btnBackToTop( $('.btn-back-to-top, .site-logo a') );
+                singlePage.btnShowHide( $('.btn-back-to-top') );
 
                 singlePage.changeLanguageVersion();
                 singlePage.buttonChangeLanguage();
 
-                singlePage.btnGoToAbout();
+                singlePage.btnDownToSection( $('.btn-next-section'), $('#about-me') );
                 singlePage.btnGoToSection();
+
+                $(document).on('scroll', singlePage.scrollGoToSection);
+                singlePage.scrollGoToSection();
+
+
             },
 
             /* ----- show min header after scroll ----- */
-            scrollHeaderMin: function() {
-                var $siteHeader = $('.site-header');
-                var $bannerHeight = $('.site-banner').height();
-                var scrollPosition = $(window).scrollTop();
-                return (scrollPosition > $bannerHeight / 4) ? $siteHeader.addClass('header-min-scroll') : $siteHeader.removeClass('header-min-scroll');
+            scrollHeaderMin: function(headerSite, classHeader) {
+                var $bannerHeight = headerSite.height();
+                var scrollPosition = $(document).scrollTop();
+                return (scrollPosition > $bannerHeight / 5) ? headerSite.addClass(classHeader) : headerSite.removeClass(classHeader);
             },
 
             /* ----- show and hide main navigation ----- */
-            showHideNav: function() {
-                $('.btn-mobile-nav').on('click', function(ev) {
+            showHideNav: function(button, menu) {
+                button.on('click', function(ev) {
                     ev.preventDefault();
-                    var $button = $(this);
-                    $button.toggleClass('active');
-                    $('.nav-main').slideToggle();
+                    var $this = $(this);
+                    $this.toggleClass('active');
+                    menu.slideToggle();
                 });
             },
 
@@ -65,7 +69,7 @@
             changeLanguageVersion: function() {
                 $('[data-lang]').each(function(index, el) {
                     var $textLang = $(el).data('lang');
-                    $(el).text( lang [ localStorage.getItem('lang-version') || 'en'][ $textLang ] );
+                    $(el).text( lang [ localStorage.getItem('lang-version') || 'pl'][ $textLang ] );
                 });
 
                 var currLang = localStorage.getItem('lang-version');
@@ -94,31 +98,32 @@
             },
 
             /* ----- show hide - button back to top ----- */
-            btnShowHide: function() {
+            btnShowHide: function(button) {
                 var $pageTop = $(window).scrollTop();
                 var $bannerHeight = $('.site-banner').height();
-                return ( $pageTop > $bannerHeight / 3 ) ? singlePage.$btnBackToTop.fadeIn() : singlePage.$btnBackToTop.fadeOut()
+                return ( $pageTop > $bannerHeight / 4 ) ? button.fadeIn() : button.fadeOut()
             },
 
+
             /* ----- button back to top ----- */
-            btnBackToTop: function() {
-                singlePage.$btnBackToTop.on('click', function(ev) {
+            btnBackToTop: function(button) {
+                button.on('click', function(ev) {
                     ev.preventDefault();
                     ev.stopPropagation();
 
-                    $('body').animate({
+                    $('html, body').animate({
                        scrollTop: 0
                    }, 800);
                 });
             },
 
             /* ----- button go to about ----- */
-            btnGoToAbout: function() {
-                $('.btn-next-section').on('click', function(ev) {
+            btnDownToSection: function(button, sectionPage) {
+                button.on('click', function(ev) {
                     ev.preventDefault();
-                    var aboutPosition = $('#about-me').offset().top;
+                    var aboutPosition = sectionPage.offset().top;
 
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: aboutPosition
                     }, 1200);
                 });
@@ -128,17 +133,42 @@
             btnGoToSection: function() {
                 $('.site-navigation a').on('click', function(ev) {
                     ev.preventDefault();
-                    var $link = $(this);
-                    var hash = $link[0].hash;
-                    var sectionPosition = $(hash).offset().top;
 
+                    $(document).off('scroll', singlePage.scrollGoToSection);
                     $('.site-navigation a').parent().removeClass('active');
-                    $link.parent().addClass('active');
+                    $(this).parent().addClass('active');
 
-                    $('body').animate({
+                    var link = $(this).attr('href');
+                    var sectionPosition = $(link).offset().top;
+
+                    $('.nav-main').slideUp();
+                    $('.btn-mobile-nav').removeClass('active');
+
+                    $('html, body').stop().animate({
                         scrollTop: sectionPosition
-                    }, 1200);
+                    }, 800, function() {
+                        $(document).on('scroll', singlePage.scrollGoToSection);
+                    });
                 });
+            },
+
+            /* ----- scroll go to section ----- */
+            scrollGoToSection: function() {
+                var scrollTop = $(document).scrollTop();
+
+                $('.site-navigation a').each(function() {
+                    var sectionElement = $(this).attr('href');
+                    var sectionPosition = $(sectionElement).offset().top;
+
+                    if(sectionPosition <= scrollTop + 100) {
+                        $('.site-navigation a').parent().removeClass('active');
+                        $(this).parent().addClass('active');
+                    }
+
+                    console.log($(sectionElement).height() );
+                });
+
+
             }
         };
 

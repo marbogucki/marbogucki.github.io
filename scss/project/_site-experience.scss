@@ -1,0 +1,97 @@
+.experience-work {
+  padding: 0 2rem;
+}
+
+.experience-box {
+  padding-left: 4rem;
+  margin-left: 1rem;
+  position: relative;
+  border-left: 1px solid rgba($grey, .3);
+
+  .start-work {
+    position: absolute;
+    top: 0;
+    left: 0rem;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin-left: -1.7rem;
+      border-radius: 3rem;
+      border: 2px solid rgba($grey, .3);
+      background-color: $white;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 3rem;
+      background-color: rgba($grey, .3);
+      margin-top: -2.2rem;
+      margin-left: -0.5rem;
+    }
+  }
+
+  &:first-child {
+
+    .start-work {
+
+      &::before {
+        border-color: rgba($blue, .5);
+      }
+
+      &::after {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .company {
+    margin: 0;
+    color: $blue;
+    font-family: $oswald;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+    line-height: 1.4;
+
+    // * ========== min-width: 720px ----------
+    @include rwd(md) {
+      font-size: 2.6rem;
+      line-height: 1.3;
+    }
+  }
+
+  .position {
+    margin: 0;
+    font-family: $oswald;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: rgba($grey, .4);
+
+    // * ========== min-width: 720px ----------
+    @include rwd(md) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .desc {
+    margin: 0;
+    padding-top: .8rem;
+    padding-bottom: 5rem;
+    font-family: $ropa-sans;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: left;
+
+    // * ========== min-width: 720px ----------
+    @include rwd(md) {
+      font-size: 1.9rem;
+    }
+  }
+}
