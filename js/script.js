@@ -180,8 +180,8 @@
     var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 54322780, lng: 18615471},
-            zoom: 12
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
         });
     }
 
