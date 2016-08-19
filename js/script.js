@@ -176,14 +176,15 @@
         singlePage.init();
     });
 
+    /* ----- google map ----- */
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 54322780, lng: 18615471},
+            zoom: 12
+        });
+    }
+
 })();
 
 
-/* ----- google map ----- */
-var map;
-function() initMap {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 54322780, lng: 18615471},
-        zoom: 12
-    });
-}
