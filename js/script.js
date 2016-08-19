@@ -34,8 +34,6 @@
                 $(document).on('scroll', singlePage.scrollGoToSection);
                 singlePage.scrollGoToSection();
 
-                singlePage.mapInit();
-
             },
 
             /* ----- show min header after scroll ----- */
@@ -73,7 +71,7 @@
                     $(el).text( lang [ localStorage.getItem('lang-version') || 'pl'][ $textLang ] );
 
                     if($textLang == 'button_cv') {
-                        console.log($(el).attr('href', 'doc/cv-marcin-bogucki-' + localStorage.getItem('lang-version') + '.pdf'));
+                        $(el).attr('href', 'doc/cv-marcin-bogucki-' + localStorage.getItem('lang-version') + '.pdf');
                     }
                 });
 
@@ -171,16 +169,6 @@
                         $('.site-navigation a').parent().removeClass('active');
                         $(this).parent().addClass('active');
                     }
-                });
-            },
-
-            /* ----- google map ----- */
-            mapInit: function() {
-                var map;
-
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -34.397, lng: 150.644},
-                    zoom: 8
                 });
             }
         };
