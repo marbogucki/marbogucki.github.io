@@ -164,8 +164,6 @@
                         $('.site-navigation a').parent().removeClass('active');
                         $(this).parent().addClass('active');
                     }
-
-                    console.log($(sectionElement).height() );
                 });
 
 
