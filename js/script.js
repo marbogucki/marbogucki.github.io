@@ -79,6 +79,8 @@
                 var currLang = localStorage.getItem('lang-version');
                 $('.nav-language li').removeClass('active');
 
+                $('html').attr('lang', currLang);
+
                 if(currLang) {
                     $('.nav-language a[data-ver-lang=' + currLang + ']').parent().addClass('active');
                 } else {
