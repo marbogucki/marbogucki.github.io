@@ -46,5 +46,4 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         icon: image
     });
-
 }
