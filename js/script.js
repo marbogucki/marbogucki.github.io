@@ -34,7 +34,7 @@
                 $(document).on('scroll', singlePage.scrollGoToSection);
                 singlePage.scrollGoToSection();
 
-                singlePage.mapInit();
+                singlePage.initMap();
 
             },
 
@@ -175,7 +175,7 @@
             },
 
             /* ----- google map ----- */
-            mapInit: function() {
+            initMap: function() {
                 var map;
 
                 map = new google.maps.Map(document.getElementById('map'), {
