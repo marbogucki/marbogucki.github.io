@@ -3875,4 +3875,7 @@ footer {
         display: inline-block;
         width: 33%; } }
 
+.google-map {
+  height: 70vh; }
+
 /*# sourceMappingURL=style.css.map */

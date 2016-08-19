@@ -34,6 +34,7 @@
                 $(document).on('scroll', singlePage.scrollGoToSection);
                 singlePage.scrollGoToSection();
 
+                singlePage.mapInit();
 
             },
 
@@ -171,8 +172,16 @@
                         $(this).parent().addClass('active');
                     }
                 });
+            },
 
+            /* ----- google map ----- */
+            mapInit: function() {
+                var map;
 
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.397, lng: 150.644},
+                    zoom: 8
+                });
             }
         };
 
