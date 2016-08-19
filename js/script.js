@@ -70,6 +70,10 @@
                 $('[data-lang]').each(function(index, el) {
                     var $textLang = $(el).data('lang');
                     $(el).text( lang [ localStorage.getItem('lang-version') || 'pl'][ $textLang ] );
+
+                    if($textLang == 'button_cv') {
+                        console.log($(el).attr('href', 'doc/cv-marcin-bogucki-' + localStorage.getItem('lang-version') + '.pdf'));
+                    }
                 });
 
                 var currLang = localStorage.getItem('lang-version');
