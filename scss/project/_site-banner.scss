@@ -26,11 +26,10 @@
     color: $white;
     text-align: center;
     padding: 23rem 2rem 10rem;
-    font-size: 2.7rem;
+    font-size: 3.5rem;
 
     b {
       text-transform: uppercase;
-      font-size: 3.5rem;
     }
   }
 
@@ -40,11 +39,7 @@
 
     .heading {
       padding-top: 45vh;
-      font-size: 3.2rem;
-
-      b {
-        font-size: 4rem;
-      }
+      font-size: 4rem;
     }
   }
 
@@ -52,11 +47,7 @@
   @include rwd(lg) {
 
     .heading {
-      font-size: 4rem;
-
-      b {
-        font-size: 4.5rem;
-      }
+      font-size: 4.5rem;
     }
   }
 }

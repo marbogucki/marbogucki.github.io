@@ -3596,23 +3596,18 @@ footer {
     color: #FFFFFF;
     text-align: center;
     padding: 23rem 2rem 10rem;
-    font-size: 2.7rem; }
+    font-size: 3.5rem; }
     .site-banner .heading b {
-      text-transform: uppercase;
-      font-size: 3.5rem; }
+      text-transform: uppercase; }
   @media (min-width: 768px) and (min-height: 600px) {
     .site-banner {
       height: 100vh; }
       .site-banner .heading {
         padding-top: 45vh;
-        font-size: 3.2rem; }
-        .site-banner .heading b {
-          font-size: 4rem; } }
+        font-size: 4rem; } }
   @media (min-width: 960px) {
     .site-banner .heading {
-      font-size: 4rem; }
-      .site-banner .heading b {
-        font-size: 4.5rem; } }
+      font-size: 4.5rem; } }
 
 .cv {
   background-color: #4e99cc;
@@ -3641,7 +3636,8 @@ footer {
     font-size: 2rem;
     font-weight: 300;
     font-family: "Oswald";
-    line-height: 1.5; }
+    line-height: 1.5;
+    text-align: center; }
   .cv a {
     border: 2px solid #FFFFFF;
     text-decoration: none;
