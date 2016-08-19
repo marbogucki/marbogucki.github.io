@@ -48,7 +48,7 @@ var lang = {
 
         work_01: 'Intendece and preparation of corporate identity. Creation of a logotype, letterhead paper, leaflet, folders, website. Designing user interface for cabinets with medical drugs - "Monalisa", and interfaces medical solutions for surgery "Vitruvius". Preparation of graphic design the interface of the "Leonardo" - to service hospital ward and patient management.',
         work_02: 'Cooperation with PHP programmers in the field of web applications using HTML and CSS. Working on projects for brands and advertising campaigns: GET IN Bank, e-Health Solutions, NETIA, primeindustrial.pl, dawca.pl, zawodniacy.pl.',
-        work_03: '',
+        work_03: 'Preparation and intendece of projects, communication interfaces audio-video between users scattered around the world. System work out wonderfully  as well as e-learning tool for training on-line. In addition to discussions audio-video system provides, a chat conversation, transfer files, conduct secret and transparent votes , creating surveys and tests.',
         work_04: 'Generate of software electronic registers "Nasze Oceny" for primary, middle and secondary schools. Creating graphic design and intendance product development. Creating graphic icon and educational textbooks like E-book.',
         work_05: 'Creating HTML4.0 and CSS code for websites and online stores. Development of existing products for brand: Microsoft Polska, Fuji Film, italux.pl, Water House.',
 
