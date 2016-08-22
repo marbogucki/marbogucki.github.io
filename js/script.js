@@ -68,7 +68,7 @@
             changeLanguageVersion: function() {
                 $('[data-lang]').each(function(index, el) {
                     var $textLang = $(el).data('lang');
-                    $(el).text( lang [ localStorage.getItem('lang-version') || 'pl'][ $textLang ] );
+                    $(el).text( lang [ localStorage.getItem('lang-version') || 'en'][ $textLang ] );
 
                     if($textLang == 'button_cv') {
                         $(el).attr('href', 'doc/cv-marcin-bogucki-' + localStorage.getItem('lang-version') + '.pdf');
