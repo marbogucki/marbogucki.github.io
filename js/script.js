@@ -71,7 +71,7 @@
                     $(el).text( lang [ localStorage.getItem('lang-version') || 'en'][ $textLang ] );
 
                     if($textLang == 'button_cv') {
-                        $(el).attr('href', 'doc/cv-marcin-bogucki-' + localStorage.getItem('lang-version') + '.pdf');
+                        $(el).attr('href', 'doc/cv-marcin-bogucki-' + (localStorage.getItem('lang-version') || 'en') + '.pdf');
                     }
                 });
 
