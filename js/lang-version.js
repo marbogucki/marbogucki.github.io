@@ -40,19 +40,19 @@ var lang = {
         contact: 'Contact',
 
         banner_text_bold: 'You\'re looking for modern and creative solutions?',
-        banner_text_normal: 'Together accomplished Your goal.',
+        banner_text_normal: 'Together we will accomplish your goal.',
 
-        about_01: 'My name is Marcin and I\'m Web Designer. In 2008 I graduate form University of Warmia and Mazury in Olsztyn as MSc Technical-Information Education. For 6 years I\'ve been designing websites and web aplications, and recently I realize projects as well as front-end developer.',
-        about_02: 'I am focusing attention on developing skills in creating responsive websites and web applications using HTML, CSS and JavaScript, and getting to know the most modern technologies. Entrusted projects I consider responsibly and with commitment. My professional approach helps meet the highest expectations.',
-        about_03: 'I\'m keen on working with teams, where people exchanges solutions and ideas. In that, I\'m acquire greater experience, and the temat works faster and efficiently. It just companionate the team means that he is able to accomplish even the most difficult issues of information.',
+        about_01: 'My name is Marcin and I\'m Web Designer. In 2008 I graduatde from University of Warmia and Mazury in Olsztyn as MSc Technical-Information Education. For 6 years I\'ve been designing websites and web aplications, and recently was also realizing projects as front-end developer.',
+        about_02: 'I\'m focusing my attention on developing skills of creating responsive websites and web applications using HTML, CSS and JavaScript, and getting to know the most modern technologies. I take care of entrusted projects with responsibility and commitment. My professional approach helps meet the highest expectations.',
+        about_03: 'I\'m keen on working with teams, where people exchanges solutions and ideas. Thanks to that, I acquire greater experience, and team works faster and more efficiently. It is because of team cooperation that it is able to accomplish even the most difficult IT tasks.',
 
         work_01: 'Intendece and preparation of corporate identity. Creation of a logotype, letterhead paper, leaflet, folders, website. Designing user interface for cabinets with medical drugs - "Monalisa", and interfaces medical solutions for surgery "Vitruvius". Preparation of graphic design the interface of the "Leonardo" - to service hospital ward and patient management.',
-        work_02: 'Cooperation with PHP programmers in the field of web applications using HTML and CSS. Working on projects for brands and advertising campaigns: GET IN Bank, e-Health Solutions, NETIA, primeindustrial.pl, dawca.pl, zawodniacy.pl.',
-        work_03: 'Preparation and intendece of projects, communication interfaces audio-video between users scattered around the world. System work out wonderfully  as well as e-learning tool for training on-line. In addition to discussions audio-video system provides, a chat conversation, transfer files, conduct secret and transparent votes , creating surveys and tests.',
-        work_04: 'Generate of software electronic registers "Nasze Oceny" for primary, middle and secondary schools. Creating graphic design and intendance product development. Creating graphic icon and educational textbooks like E-book.',
+        work_02: 'Working with PHP programmers in the field of web applications using HTML and CSS. Working on projects for brands and advertising campaigns: GET IN Bank, e-Health Solutions, NETIA, primeindustrial.pl, dawca.pl, zawodniacy.pl.',
+        work_03: 'Preparation and supervision of audio-video communication interfaces projects for users scattered around the world. System worked out wonderfully as well as e-learning tool for on-line training. In addition to audio-video discussions system provides a chat conversation, files transfer, secret conducts and transparent votes , creating surveys and tests.',
+        work_04: 'Generating of software electronic registers "Nasze Oceny" for primary, middle and secondary schools. Creating graphic design and supervision of product development. Creating graphic icons and educational e-books.',
         work_05: 'Creating HTML4.0 and CSS code for websites and online stores. Development of existing products for brand: Microsoft Polska, Fuji Film, italux.pl, Water House.',
 
-        skills_txt: 'In my work I use the following tools in the field of front-end and web design.  Their joining allows for the implementation of the most complicated projects and achieve all objectives.',
+        skills_txt: 'In my work I use the following tools in the field of front-end and web design. Their combination allows to implement the most complicated projects and achieve all objectives.',
 
         button_cv: 'Download my CV',
         cv_heading: 'More information',
