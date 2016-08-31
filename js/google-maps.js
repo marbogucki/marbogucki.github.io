@@ -6,10 +6,11 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
         disableDefaultUI: true,
-        scrollwheel: true,
+        scrollwheel: false,
         draggable: true,
         disableDoubleClickZoom: true,
         zoomControl: false,
+        zoomControl: true,
 
         zoom: 15,
         styles: [
