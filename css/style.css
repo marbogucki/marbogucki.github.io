@@ -3741,9 +3741,6 @@ footer {
     @media (min-width: 960px) {
       .sills-list li {
         width: 16.6667%; } }
-    @media (min-width: 1200px) {
-      .sills-list li {
-        width: 12.5%; } }
   .sills-list i,
   .sills-list img {
     font-size: 4rem;
