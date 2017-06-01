@@ -23,6 +23,7 @@ var lang = {
         work_03: 'Przygotowywanie i nadzór nad projektami interfejsów komunikacji audio-wizualnej między użytkownikami rozproszonymi na całym świecie. System wspaniale sprawdził się także jako narzędzie e-learningowe do prowadzenia szkoleń on-line. Opróćz możliwości rozmowy audio-wideo, system zapewniał prowadzenie chat-ów, przesyłanie plików, prowadzenie głosowań tajnych oraz jawnych,  tworzenie ankiet oraz testów.',
         work_04: 'Wytwarzanie oprogramowania dzinników elektronicznych "Nasze Oceny" dla szkół podstawowych, gimnazjalnych i ponadpodstawowych. Przygotowywanie projektów graficznych i nadzór nad rozwojem produktu. Przygotowywanie ikon. Tworzenie szkolnych podręczników typu E-book.',
         work_05: 'Przygotowywanie kodu HTML 4.0 i CSS stron i sklepów internetowych. Rozwój istniejących produktów dla marek: Microsoft Polska, Fuji Film, italux.pl, Water House.',
+        work_06: 'Aktualizacja i tworzenie sklepów internetowych. Praca nad projektami dla marek: Reserved, Mohito, Sinsay, Cropp, House.',
 
         skills_txt: 'W swojej pracy wykorzystuję poniższe narzędzia z zakresu front-end i web designu. Ich łączenie pozwala na realizację najbardziej skomplikowanych projektów i osiągnięcie wszystkich zamierzonych celów.',
 
