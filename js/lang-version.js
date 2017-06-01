@@ -56,6 +56,7 @@ var lang = {
         work_03: 'Preparation and supervision of audio-video communication interface projects for users around the world. System also turned out to be a great solution for e-learning and became a powerful tool for on-line training. In addition to audio-video discussions the system has a built in communicator, files transfer, secret and transparent voting system and creating surveys and tests.',
         work_04: 'Generating software electronic registers "Nasze Oceny" for primary, secondary and high schools. Creating graphic design and supervision of the product development. Creating graphic icons and educational e-books.',
         work_05: 'Creating HTML4.0 and CSS code for websites and online stores. Development of existing products for brands such as: Microsoft Polska, Fuji Film, italux.pl, Water House.',
+        work_06: 'Update and create online stores. Working on projects for brands: Reserved, Mohito, Sinsay, Cropp, House.',
 
         skills_txt: 'In my work I use the following tools in the field of front-end and web design. Their combination allows me to implement solutions to the most complicated projects and achieve all set objectives.',
 
